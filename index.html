@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FlynCodes</title>
+  <meta name="description" content="Flyn is a passionate 18 year old student from England, a self-taught full-stack developer and web designer. He is also a proud open-source and privacy advocate">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="imgs/memoji.png" as="image">
+  <link rel="preload" href="fonts/Lato-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="fonts/Lato-Black.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.min.css">
+  <script>
+    window.onscroll = () => scrollFunction()
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementsByTagName('nav')[0].classList.add('active')
+        document.getElementsByClassName('scroll-down')[0].classList.add('active')
+      } else {
+        if (!document.getElementsByTagName('nav')[0].classList.contains('open'))
+          document.getElementsByTagName('nav')[0].classList.remove('active')
+        document.getElementsByClassName('scroll-down')[0].classList.remove('active')
+      }
+    }
+
+    function mobileNav() {
+      if (document.getElementsByTagName('nav')[0].classList.contains('open')) {
+        document.getElementsByTagName('nav')[0].classList.remove('open')
+        scrollFunction()
+      } else {
+        document.getElementsByTagName('nav')[0].classList.add('active')
+        document.getElementsByTagName('nav')[0].classList.add('open')
+      }
+    }
+  </script>
+</head>
+<body>
+  <nav>
+   <section class="name">
+    <a href="#top">
+      <span class="white-colour">Flyn</span><span class="the-chosen-colour">.Codes</span>
+    </a>
+   </section>
+   <button id="mobile" onclick="mobileNav()" aria-hidden="true">
+     <span></span>
+     <span></span>
+     <span></span>
+    </button>
+    <section class="links">
+     <a href="#projects">Projects and experience</a>
+     <a href="#about">About me</a>
+     <a href="#contact">Contact me</a>
+    </section>
+  </nav>
+  <section id="top">
+    <section class="intro">
+      <div class="the-chosen-box">
+        <h1>I'm your <a href="https://www.youtube.com/watch?v=jeg_TJvkSjg" target="_blank" rel="noopener">computer man</a></h1>
+        <h2>A passionate 18 year old student from England, a self-taught full-stack developer and web designer.<br/>I’m also a proud open-source and privacy advocate</h2>
+        <h3>You don't understand the impotance of privacy until you’ve lost it</h3>
+      </div>
+      <div class="icons">
+        <a href="#contact"><i class="email-icon"></i><br/>Email me</a>
+        <a href="https://github.com/FlynCodes" target="_blank" rel="noopener"><i class="github-icon"></i><br/>My GitHub</a>
+        <a href="https://twitter.com/FlynCodes" target="_blank" rel="noopener"><i class="twitter-icon"></i><br/>My Twitter</a>
+      </div>
+      <a href="#projects" class="call-to-action button">Projects and experience <i class="scroll-icon"></i></a>
+    </section>
+    <section class="grey-background">
+      <div class="egg">
+        <i class="name-and-picture"></i>
+      </div>
+    </section>
+    <a class="scroll-down" href="#projects" aria-hidden="true" tabindex="-1">
+      <i class="scroll-icon"></i>
+    </a>
+  </section>
+  <main>
+    <span class="eggthumbsup"></span>
+    <span class="eggblank"></span>
+    <span class="eggrocket"></span>
+    <span class="eggspeechbubble"></span>
+    <section id="projects">
+      <h1 class="text-centre">Projects and experience</h1>
+      <p class="subtitle text-centre">All the projects and experiece I have gained over the 7 years I’ve been coding</p>
+      <div class="experience">
+        <section>
+          <div class="progress-bar-top">
+            <span>Begineer</span>
+            <span style="width:60px">Junior</span>
+            <span>Senior</span>
+          </div>
+          <span>Java<div class="subtext">7 years</div></span>
+          <div class="progress-bar">
+            <i class="bar" style="width:100%"></i><i class="check-one"></i><i class="check-two"></i><i class="check-three"></i>
+          </div>
+          <span>HTML<div class="subtext">5 years</div></span>
+          <div class="progress-bar">
+            <i class="bar" style="width:100%"></i><i class="check-one"></i><i class="check-two"></i><i class="check-three"></i>
+          </div>
+          <span>PHP<div class="subtext">5 years</div></span>
+          <div class="progress-bar">
+            <i class="bar" style="width:100%"></i><i class="check-one"></i><i class="check-two"></i><i class="check-three"></i>
+          </div>
+          <span>SQL<div class="subtext">6 years</div></span>
+          <div class="progress-bar">
+            <i class="bar" style="width:65%"></i><i class="check-one"></i><i class="check-two"></i>
+          </div>
+          <span>CSS<div class="subtext">4 years</div></span>
+          <div class="progress-bar">
+            <i class="bar" style="width:65%"></i><i class="check-one"></i><i class="check-two"></i>
+          </div>
+        </section>
+        <section>
+          <div class="progress-bar-top">
+            <span>Begineer</span>
+            <span style="width:60px">Junior</span>
+            <span>Senior</span>
+          </div>
+          <span>JavaScript<div class="subtext">4 years</div></span>
+          <div class="progress-bar">
+            <i class="bar" style="width:70%"></i><i class="check-one"></i><i class="check-two"></i>
+          </div>
+          <span>NodeJS<div class="subtext">3 years</div></span>
+          <div class="progress-bar">
+            <i class="bar" style="width:70%"></i><i class="check-one"></i><i class="check-two"></i>
+          </div>
+          <span>TypeScript<div class="subtext">2 years</div></span>
+          <div class="progress-bar">
+            <i class="bar" style="width:0%"></i>
+          </div>
+          <span>Python<div class="subtext">1 year</div></span>
+          <span>...and I want to learn C#, C++, Deno JS & Vue.JS</span>
+          <div></div>
+      </section>
+      </div>
+      <div class="technologies">
+        <p class="subtitle text-centre">I use industry leading technologies and software</p>
+        <div class="images">
+          <img height="44" width="108" src="imgs/Apache.png" alt="Apache">
+          <img height="44" width="271" src="imgs/Atlassian.png" alt="Atlassian">
+          <img height="44" width="88" src="imgs/Auth0.png" alt="Auth Zero">
+          <img height="44" width="246" src="imgs/Azure.png" alt="Microsoft Azure">
+          <img height="44" width="44" src="imgs/Deno.png" alt="Deno JS">
+          <img height="44" width="88" src="imgs/DigitalOcean.png" alt="Digital Ocean">
+          <img height="44" width="187" src="imgs/Eclipse.png" alt="Eclipse">
+          <img height="44" width="88" src="imgs/Expressjs.png" alt="Express JS">
+          <img height="44" width="44" src="imgs/Filezilla.png" alt="File zilla">
+          <img height="44" width="88" src="imgs/FreeBSD.png" alt="Free BSD">
+          <img height="44" width="104" src="imgs/Git.png" alt="Git">
+          <img height="44" width="132" src="imgs/Github.png" alt="Git Hub">
+          <img height="44" width="73" src="imgs/GitKraken.png" alt="Git Kraken">
+          <img height="44" width="144" src="imgs/GitLab.png" alt="Git Lab">
+          <img height="44" width="186" src="imgs/Grafana.png" alt="Grafana">
+          <img height="44" width="63" src="imgs/hapiJS.png" alt="Hapi JS">
+          <img height="44" width="49" src="imgs/HAProxy.png" alt="HA Proxy">
+          <img height="44" width="144" src="imgs/Jenkins.png" alt="Jenkins">
+          <img height="44" width="88" src="imgs/Laravel.png" alt="Laravel">
+          <img height="44" width="43" src="imgs/Linux.png" alt="Linux">
+          <img height="44" width="44" src="imgs/MongoDBAtlas.png" alt="Mongo DB Atlas">
+          <img height="44" width="163" src="imgs/MongoDB.png" alt="Mongo DB">
+          <img height="44" width="85" src="imgs/MySQL.png" alt="MySQL">
+          <img height="44" width="88" src="imgs/Nginx.png" alt="Nginx">
+          <img height="44" width="88" src="imgs/NodeJS.png" alt="Node JS">
+          <img height="44" width="44" src="imgs/OVHcloud.png" alt="OVH cloud">
+          <img height="44" width="150" src="imgs/PFsense.png" alt="PF Sense">
+          <img height="44" width="44" src="imgs/Plesk.png" alt="Plesk">
+          <img height="44" width="132" src="imgs/Pm2.png" alt="PM Two">
+          <img height="44" width="137" src="imgs/Redis.png" alt="Redis">
+          <img height="44" width="43" src="imgs/ShareX.png" alt="Share X">
+          <img height="44" width="44" src="imgs/Sublimetext.png" alt="Sublime Text">
+          <img height="44" width="43" src="imgs/Thunderbird.png" alt="Thunder Bird">
+          <img height="44" width="88" src="imgs/Ubuntu.png" alt="Ubuntu">
+          <img height="44" width="206" src="imgs/Virtualmin.png" alt="Virtual min">
+          <img height="44" width="262" src="imgs/VSCode.png" alt="Visual Studio Code">
+          <img height="44" width="88" src="imgs/VueJS.png" alt="Vue JS">
+          <img height="44" width="44" src="imgs/winscp.png" alt="WinSCP">
+          <img height="44" width="43" src="imgs/XAMPP.png" alt="XAMPP">
+          <img height="44" width="88" src="imgs/YiiFramework.png" alt="Yii Framework">
+          <img height="44" width="166" src="imgs/ZendTechnologies.png" alt="Zend Framework">
+          <img height="44" width="88" src="imgs/Trello.png" alt="Trello">
+          <img height="44" width="88" src="imgs/NewRelic.png" alt="New Relic">
+          <img height="44" width="145" src="imgs/Twilio.png" alt="Twilio">
+          <img height="44" width="148" src="imgs/Termius.png" alt="Termius">
+          <img height="44" width="141" src="imgs/Travis.png" alt="Travis CI">
+          <img height="44" width="121" src="imgs/Unity.png" alt="Unity">
+          <img height="44" width="176" src="imgs/Electron.png" alt="Electron JS">
+        </div>
+      </div>
+      <div class="projects">
+        <article>
+          <h1>Mobile apps</h1>
+          <p>One of the many things I haven’t done that I want to do is make mobile apps but thanks to a high barrier to entry I’ve never gotten around to it</p>
+          <span class="left subtext">Java, Android Studio, XCode</span><span class="right subtext">2021 - Present</span>
+        </article>
+        <article>
+          <h1>Sign Language</h1>
+          <p>I’ve always felt sign language would be very useful to learn but there are no free, easy and complete lessons out there, I want to change that in the near future</p>
+          <span class="left subtext">HTML, CSS, NodeJS</span><span class="right subtext">2021 - Present</span>
+        </article>
+        <article>
+          <h1>Large Java Projects</h1>
+          <p>Being the most experienced in Java, I have made over 100 projects with many being large ones that are at the core of running large Minecraft networks</p>
+          <span class="left subtext">Java, GitHub, Eclipse</span><span class="right subtext">2016 - 2019</span>
+        </article>
+        <article>
+          <h1>My own monitoring, request & analytics</h1>
+          <p>As there were no cheap, reliable and privacy friendly solutions at the time, I made my own, it monitors all my servers and networks and make sure its working</p>
+          <span class="left subtext">NodeJS, Bash</span><span class="right subtext">2018 - Present</span>
+        </article>
+        <article>
+          <h1>Application Programming Interface</h1>
+          <p>For years I’ve maintained 2 large RESTful based APIs averaging millions of requests per month, they are geo routed, initially made in PHP, I converted it to NodeJS</p>
+          <span class="left subtext">JSON, PHP, NodeJS, JEST testing</span><span class="right subtext">2016 - Present</span>
+        </article>
+        <article>
+          <h1>Experienced Discord Bot developer</h1>
+          <p>I’ve made quite a few large and small Discord bots, from a large support ticket bot to an FAQ bot that keeps everyone informed of the service status</p>
+          <span class="left subtext">NodeJS, DiscordJS, PHP</span><span class="right subtext">2018 - Present</span>
+        </article>
+        <article>
+          <h1>Global Minecraft ban website</h1>
+          <p>Imagine how easy it would be for Minecraft server staff to look at a players past history across hundreds of different servers to see if they’ve been good or bad</p>
+          <span class="left subtext">PHP, NodeJS, MySQL</span><span class="right subtext">2018 - Present</span>
+        </article>
+        <article>
+          <h1>Global Minecraft Network</h1>
+          <p>I have begun working on a project where Minecraft servers from around the world are connected together, it’s currently top secret but more info next few years</p>
+          <span class="left subtext">Java, NodeJS, MongoDB, VueJS</span><span class="right subtext">2020 - Present</span>
+        </article>
+        <article>
+          <h1>NodeJS & Backend developer</h1>
+          <p>I’ve always liked the language since I was using it for just websites so when I found NodeJS it opened up so many more possabilities, I now use it for everything ❤</p>
+          <span class="left subtext">NodeJS, JavaScript, TypeScript</span><span class="right subtext">2018 - Present</span>
+        </article>
+        <article>
+          <h1>Cloud lover</h1>
+          <p>I’ve always used the cloud, big and small, from small providers to gain presence around the world to harnessing the power and flexability of big cloud</p>
+          <span class="left subtext">Azure, OVH, DigitalOcean, M247</span><span class="right subtext">2014 - Present</span>
+        </article>
+        <article>
+          <h1>Creating my first VueJS website</h1>
+          <p>I’m a fan of VueJS because of it’s endless expansion and ease of use but I’ve never really used before so one of my next projects is creating a VueJS website</p>
+          <span class="left subtext">VueJS, TypeScript, CSS</span><span class="right subtext">2020 - Present</span>
+        </article>
+        <article>
+          <h1>I ❤ Open Source Software, you should too</h1>
+          <p>Having always been a self taught developer and using open source software for all that time, I like being able to give back and contribute my own code & knowledge</p>
+          <span class="left subtext">Git, GitHub, GitLab, Gitkraken</span><span class="right subtext">2018 - Present</span>
+        </article>
+        <article>
+          <h1>Knowledgeable web designer</h1>
+          <p>I pride myself on being able to make all kinds of websites that are accessible and easy to navigate whist keeping up with the latest trends</p>
+          <span class="left subtext">Adobe XD, Figma, CSS</span><span class="right subtext">2014 - Present</span>
+        </article>
+        <article>
+          <h1>Experienced database administrator</h1>
+          <p>I’ve setup and maintained a variety of databases from MySQL, MongoDB to Redis with hundreds of gigabytes of data, speed and security is top priority</p>
+          <span class="left subtext">MySQL, MongoDB, Redis</span><span class="right subtext">2014 - Present</span>
+        </article>
+        <article>
+          <h1>Knowledgeable networking engineer</h1>
+          <p>I’ve always been into networking, from running pfSense at home with gigabit internet to building my own mini datacentre at home with a 37u server rack</p>
+          <span class="left subtext">pfSense, fibre & 10G networking</span><span class="right subtext">2016 - Present</span>
+        </article>
+        <article>
+          <h1>Experienced cyber security engineer</h1>
+          <p>Years of running my own websites, projects, databases and servers has taught me a lot about security and staying up to date with the latest security standards</p>
+          <span class="left subtext">Sysadmin, bash, python</span><span class="right subtext">2014 - Present</span>
+        </article>
+        <article>
+          <h1>Experienced linux system administrator</h1>
+          <p>Since starting my own hosting I’ve setup, maintained and decomissioned loads of Linux servers running a variety of applications including email servers</p>
+          <span class="left subtext">Sysadmin, bash, python</span><span class="right subtext">2014 - Present</span>
+        </article>
+        <article>
+          <h1>Many many Minecraft servers</h1>
+          <p>Over the years I’ve worked for 9 different Minecraft servers, from admin to co-owner. I stopped wanting to be staff and start being the owner again in 2018</p>
+          <span class="left subtext">Java</span><span class="right subtext">2015 - 2018</span>
+        </article>
+        <article>
+          <h1>My own Minecraft and website hosting</h1>
+          <p>Driven by the need for a way to host my Minecraft server I started my own hosting, later on I allowed friends & family to host their own servers and websites</p>
+          <span class="left subtext">Multicraft, PHP, Plesk, VirtualMin</span><span class="right subtext">2014 - Present</span>
+        </article>
+        <article>
+          <h1>My first Minecraft server</h1>
+          <p>This journey started with wanting to make my own Minecraft server when I was younger, it didn’t last long  but I knew this wouldn’t be the last time I tried...</p>
+          <span class="left subtext">Java</span><span class="right subtext">2014 - 2015</span>
+        </article>
+      </div>
+    </section>
+    <section id="about">
+      <h1 class="text-centre">About me</h1>
+      <p class="subtitle text-centre">This is where I talk about myself, it’s a long one!</p>
+      <p class="aboutme">I’ve always been into computers, ever since I started to play with a laptop at the age of 5, thanks to my uncle who then got me my own laptop at 6, I didn’t have internet back then so I just use to listen to the music and play the games that came with Windows Vista and Windows 7
+
+      <b>At the age of 9</b> I built my first computer with my dad from birthday money I saved, I bought all the parts from a local Maplin store (side note; I did some “work experience” at Maplin before it closed, where I got to know the manager and I still have the blue Maplin tshirt).
+
+      <b>At the age of 10</b> I started to learn Java so I could write plugins for the Minecraft server I was trying to run and from there I continued to learn more programming languages and upgrade the computer I built,  I also moved to a new house where we were able to get some of the fastest internet in the country, yay
+
+      <b>At 11</b> I built another computer and started to get into Minecraft more, becoming staff on a few servers where I made some friends along the way  (some of whom began to focus more on life so I stopped talking to them but a few I still talk to every now and again).
+      now the first computer I built was doing nothing so I decided to use it to host Minecraft servers because of the fast internet I had (side note; the first computer I built is still working and being used today)
+      Over the years I learned more programming languages, using new technologies and trying new things so I could make different things and I’ve gained much more experience in a wide range of areas
+
+      In 2018 I built another computer, the computer gets more powerful each time I built one, I’m still using this computer to this day whist I’m in the process of building another computer which I will use once it is finished.
+      I started to attend college at 16 (which I enjoy) to get a dagree in computing and then work for Microsoft, which is my dream job.
+      Whist not working on a computer, I like being outdoors, gardening and riding a bike or going for walks and I love listening to music so I stay focused
+      Over the years I’ve worked on a few major projects, most notably I volunteered at a large hosting company for a year to gain user tech support experience and more recently I made a large Java project which is used at the core of a large Minecraft network and I have many more ideas for projects in the future for when I get the time.
+
+      In other words/TL:DR; I first got my hands on a computer at 5, built my first computer at 9 and then taught myself to code at the age of 10 and now I’m at college studying for a dagree in computing and one day hopefully I’ll get my dream job, which is to work for Microsoft and if I’m not at the computer I’m outdoors most likely gardening or going for a walk and listening to music</p>
+    </section>
+    <section id="contact">
+      <h1 class="text-centre">Contact me</h1>
+      <p class="subtitle text-centre">Shoot me a message and I’ll get back to you as soon as I can</p>
+      <div class="contact">
+        <div>
+          <h1>Email me</h1>
+          <a href="emailto:contact@flyn.codes">contact@flyn.codes</a>
+        </div>or
+        <div>
+          <h1>DM me on Twitter</h1>
+          <a href="https://twitter.com/FlynCodes" target="_blank" rel="noopener">@FlynCodes</a>
+        </div>or
+        <div>
+          <h1>DM me on GitHub</h1>
+          <a href="https://github.com/FlynCodes" target="_blank" rel="noopener">@FlynCodes</a>
+        </div>
+      </div>
+      <p class="text-centre">or use the contact form below and I’ll email you back</p>
+      <form action="/api/message" method="POST">
+        <div class="nameinput">
+          <label for="name">Name</label>
+          <input type="name" name="name" id="name" maxlength="64">
+        </div>
+        <div class="emailinput">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" maxlength="254">
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea name="message" id="message" cols="50" rows="10"></textarea>
+        </div>
+        <button type="submit" class="button">Send <i class="send-icon"></i></button>
+      </form>
+    </section>
+    <footer>
+      <p class="text-centre"><b>Copyright © 2021 FlynCodes - All Rights Reserved</b></p>
+      <p class="text-centre">Designed with Figma and made with HTML, CSS, JavaScript in Visual Studio Code over a weekend, hosted on Azure Static Web Apps and Azure Functions with a <a href="https://github.com/FlynCodes/flyn.codes" target="_blank" rel="noopener">GitHub project</a></p>
+    </footer>
+  </main>
+</body>
+</html>
