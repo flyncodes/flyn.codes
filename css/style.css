@@ -5,7 +5,7 @@
   font-style: normal;
   text-rendering: optimizeLegibility;
   font-display: swap;
-  src: url("fonts/Lato-Thin.ttf") format("truetype");
+  src: url(/fonts/Lato-Thin.ttf) format("truetype");
 }
 /* Lato (thin, italic) */
 @font-face {
@@ -14,7 +14,7 @@
   font-style: italic;
   text-rendering: optimizeLegibility;
   font-display: swap;
-  src: url("fonts/Lato-Thinitalic.ttf") format("truetype");
+  src: url(/fonts/Lato-Thinitalic.ttf) format("truetype");
 }
 /* Lato (light, regular) */
 @font-face {
@@ -23,7 +23,7 @@
   font-style: normal;
   text-rendering: optimizeLegibility;
   font-display: swap;
-  src: url("fonts/Lato-Light.ttf") format("truetype");
+  src: url(/fonts/Lato-Light.ttf) format("truetype");
 }
 /* Lato (light, italic) */
 @font-face {
@@ -32,7 +32,7 @@
   font-style: italic;
   text-rendering: optimizeLegibility;
   font-display: swap;
-  src: url("fonts/Lato-Lightitalic.ttf") format("truetype");
+  src: url(/fonts/Lato-Lightitalic.ttf) format("truetype");
 }
 /* Lato (normal, regular) */
 @font-face {
@@ -41,7 +41,7 @@
   font-style: normal;
   text-rendering: optimizeLegibility;
   font-display: swap;
-  src: url("fonts/Lato-Regular.ttf") format("truetype");
+  src: url(/fonts/Lato-Regular.ttf) format("truetype");
 }
 /* Lato (normal, italic) */
 @font-face {
@@ -50,7 +50,7 @@
   font-style: italic;
   text-rendering: optimizeLegibility;
   font-display: swap;
-  src: url("fonts/Lato-Italic.ttf") format("truetype");
+  src: url(/fonts/Lato-Italic.ttf) format("truetype");
 }
 /* Lato (bold, regular) */
 @font-face {
@@ -59,7 +59,7 @@
   font-style: normal;
   text-rendering: optimizeLegibility;
   font-display: swap;
-  src: url("fonts/Lato-Bold.ttf") format("truetype");
+  src: url(/fonts/Lato-Bold.ttf) format("truetype");
 }
 /* Lato (bold, italic) */
 @font-face {
@@ -68,7 +68,7 @@
   font-style: italic;
   text-rendering: optimizeLegibility;
   font-display: swap;
-  src: url("fonts/Lato-Bolditalic.ttf") format("truetype");
+  src: url(/fonts/Lato-Bolditalic.ttf) format("truetype");
 }
 /* Lato (black, regular) */
 @font-face {
@@ -77,7 +77,7 @@
   font-style: normal;
   text-rendering: optimizeLegibility;
   font-display: swap;
-  src: url("fonts/Lato-Black.ttf") format("truetype");
+  src: url(/fonts/Lato-Black.ttf) format("truetype");
 }
 /* Lato (black, italic) */
 @font-face {
@@ -86,13 +86,13 @@
   font-style: italic;
   text-rendering: optimizeLegibility;
   font-display: swap;
-  src: url("fonts/Lato-Blackitalic.ttf") format("truetype");
+  src: url(/fonts/Lato-Blackitalic.ttf) format("truetype");
 }
 
 body {
   background-color: #242423;
   color: #FFFFFF;
-  font-family: lato, sans-serif;
+  font-family: Lato, sans-serif;
   --the-chosen-one: #FFC200;
   padding: 0;
   margin: 0;
@@ -323,7 +323,7 @@ section#top {
   right: -100px;
   margin: auto;
   bottom: 0px;
-  background: url('imgs/memoji.png');
+  background: url(/imgs/memoji.png);
   background-repeat: no-repeat;
   background-size: 380px;
   background-position: center;
@@ -335,7 +335,7 @@ section#top {
   height: 450px;
   right: -170px;
   top: 11%;
-  background: url(imgs/ThumbsUp.png);
+  background: url(/imgs/ThumbsUp.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -347,7 +347,7 @@ section#top {
   height: 450px;
   left: -270px;
   top: 30%;
-  background: url(imgs/Blank.png);
+  background: url(/imgs/Blank.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -359,7 +359,7 @@ section#top {
   height: 450px;
   right: -170px;
   top: 54%;
-  background: url(imgs/Rocket.png);
+  background: url(/imgs/Rocket.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -371,7 +371,7 @@ section#top {
   height: 450px;
   left: -200px;
   top: 85%;
-  background: url(imgs/SpeechBubble.png);
+  background: url(/imgs/SpeechBubble.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
