@@ -4,22 +4,31 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>FlynCodes</title>
-  <meta name="description" content="Flyn is a passionate 20 year old student from England, a self-taught full-stack developer and web designer. He is also a proud open-source and privacy advocate">
+  <meta name="description" content="Flyn is a passionate self-taught full-stack developer and web designer, based in England. He is also a proud open-source and privacy advocate.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preload" href="imgs/memoji.png" as="image">
   <link rel="preload" href="fonts/Lato-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="fonts/Lato-Black.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" type="text/css" media="screen" href="css/style.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/firework.css">
   <script>
     window.onscroll = () => scrollFunction()
+    window.onload = () => scrollFunction()
 
     function scrollFunction() {
-      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      const scrollToActivate = document.getElementsByClassName('banner').length > 0 ? Array.from(document.getElementsByClassName('banner')).map(elm => elm.clientHeight).reduce((a,b)=>a+b) + 1 : 0
+
+      if (document.body.scrollTop > scrollToActivate || document.documentElement.scrollTop > scrollToActivate) {
         document.getElementsByTagName('nav')[0].classList.add('active')
         document.getElementsByClassName('scroll-down')[0].classList.add('active')
+        document.getElementsByTagName('nav')[0].style.top = '0px'
+        document.getElementsByTagName('nav')[0].style.position = 'fixed'
       } else {
-        if (!document.getElementsByTagName('nav')[0].classList.contains('open'))
+        document.getElementsByTagName('nav')[0].style.position = 'absolute'
+        document.getElementsByTagName('nav')[0].style.top = scrollToActivate + 'px'
+        if (!document.getElementsByTagName('nav')[0].classList.contains('open')) {
           document.getElementsByTagName('nav')[0].classList.remove('active')
+        }
         document.getElementsByClassName('scroll-down')[0].classList.remove('active')
       }
     }
@@ -41,35 +50,44 @@
   </script>
 </head>
 <body>
-  <nav>
-   <section class="name">
-    <a href="#top">
-      <span class="white-colour">Flyn</span><span class="the-chosen-colour">.Codes</span>
-    </a>
-   </section>
-   <button id="mobile" onclick="mobileNav()" aria-hidden="true">
-     <span></span>
-     <span></span>
-     <span></span>
-    </button>
-    <section class="links">
-     <a href="#projects">Projects and experience</a>
-     <a href="#about">About me</a>
-     <a href="#contact">Contact me</a>
+  <section class="banner">
+    <section class="spacing">
+      <span class="white-colour">🥳 Celebrating <span class="the-chosen-colour">10 years</span> of coding.</span>
+      <div>
+        <span class="aboutme">From building my first custom PC at age 9, to learning to code at age 10, and now to making full-on custom e-commerce and user management websites at 21.</span>
+      </div>
     </section>
+  </section>
+  <nav>
+    <section class="name spacing">
+     <a href="#top">
+       <span class="white-colour">Flyn</span><span class="the-chosen-colour">.Codes</span>
+     </a>
+    </section>
+    <button id="mobile" onclick="mobileNav()" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+     </button>
+     <section class="links">
+      <a href="#projects">Projects and experience</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+     </section>
   </nav>
+  <div class="firework"></div>
+  <div class="firework"></div>
+  <div class="firework"></div>
   <section id="top">
     <section class="intro">
       <div class="the-chosen-box">
         <h1>I'm your <a href="https://www.youtube.com/watch?v=jeg_TJvkSjg" target="_blank" rel="noopener">computer man</a></h1>
-        <h2>A passionate 20 year old student from England, a self-taught full-stack developer and web designer.<br/>I'm also a proud open-source and privacy advocate</h2>
-        <h3>You don't understand the importance of privacy until you've lost it</h3>
+        <h2>A passionate 21 year old techie based in England,<br/>self-taught full-stack developer, computer builder, system administrator and web designer.<br/>I'm also a proud open-source and privacy advocate.</h2>
+        <h3>You don't understand the importance of privacy until you've lost it.</h3>
       </div>
       <div class="icons">
-        <a href="#contact"><i class="email-icon"></i><br/>Email me</a>
+        <a href="#contact"><i class="email-icon"></i><br/>Contact me</a>
         <a href="https://github.com/FlynCodes" target="_blank" rel="noopener"><i class="github-icon"></i><br/>My GitHub</a>
-        <a href="https://twitter.com/FlynCodes" target="_blank" rel="noopener"><i class="twitter-icon"></i><br/>My Twitter</a>
-        <a href="https://instagram.com/FlynCodes" target="_blank" rel="noopener"><i class="instagram-icon"></i><br/>My Instagram</a>
       </div>
       <a href="#projects" class="call-to-action button">Projects and experience <i class="scroll-icon"></i></a>
     </section>
@@ -89,7 +107,7 @@
     <span class="blobspeechbubble"></span>
     <section id="projects">
       <h1 class="text-centre">Projects and experience</h1>
-      <p class="subtitle text-centre">All the projects and experiece I have gained over the 9 years I've been coding</p>
+      <p class="subtitle text-centre">All the projects and experiece I have gained over the 10 years I've been coding</p>
       <div class="experience">
         <section>
           <div class="progress-bar-top">
@@ -97,29 +115,29 @@
             <span style="width:60px">Junior</span>
             <span>Senior</span>
           </div>
-          <span>Java<div class="subtext">9 years</div></span>
+          <span>Java<div class="subtext">10 years</div></span>
           <div class="progress-bar">
             <i class="bar"></i><i class="filled" style="width:100%"></i><i class="check-one"></i><i class="check-two"></i><i class="check-three"></i>
           </div>
-          <span>HTML<div class="subtext">7 years</div></span>
+          <span>HTML<div class="subtext">8 years</div></span>
           <div class="progress-bar">
             <i class="bar"></i><i class="filled" style="width:100%"></i><i class="check-one"></i><i class="check-two"></i><i class="check-three"></i>
           </div>
-          <span>PHP<div class="subtext">7 years</div></span>
+          <span>PHP<div class="subtext">8 years</div></span>
           <div class="progress-bar">
             <i class="bar"></i><i class="filled" style="width:100%"></i><i class="check-one"></i><i class="check-two"></i><i class="check-three"></i>
           </div>
-          <span>JavaScript<div class="subtext">6 years</div></span>
+          <span>JavaScript<div class="subtext">7 years</div></span>
           <div class="progress-bar">
-            <i class="bar"></i><i class="filled" style="width:80%"></i><i class="check-one"></i><i class="check-two"></i>
+            <i class="bar"></i><i class="filled" style="width:100%"></i><i class="check-one"></i><i class="check-two"></i><i class="check-three"></i>
           </div>
-          <span>NodeJS<div class="subtext">5 years</div></span>
+          <span>NodeJS<div class="subtext">6 years</div></span>
           <div class="progress-bar">
-            <i class="bar"></i><i class="filled" style="width:80%"></i><i class="check-one"></i><i class="check-two"></i>
+            <i class="bar"></i><i class="filled" style="width:100%"></i><i class="check-one"></i><i class="check-two"></i><i class="check-three"></i>
           </div>
-          <span>SQL<div class="subtext">8 years</div></span>
+          <span>SQL<div class="subtext">9 years</div></span>
           <div class="progress-bar">
-            <i class="bar"></i><i class="filled" style="width:65%"></i><i class="check-one"></i><i class="check-two"></i>
+            <i class="bar"></i><i class="filled" style="width:70%"></i><i class="check-one"></i><i class="check-two"></i>
           </div>
         </section>
         <section>
@@ -128,28 +146,28 @@
             <span style="width:60px">Junior</span>
             <span>Senior</span>
           </div>
-          <span>CSS<div class="subtext">6 years</div></span>
+          <span>CSS<div class="subtext">7 years</div></span>
           <div class="progress-bar">
-            <i class="bar"></i><i class="filled" style="width:65%"></i><i class="check-one"></i><i class="check-two"></i>
+            <i class="bar"></i><i class="filled" style="width:70%"></i><i class="check-one"></i><i class="check-two"></i>
           </div>
-          <span>TypeScript<div class="subtext">4 years</div></span>
+          <span>SvelteKit<div class="subtext">1 years</div></span>
           <div class="progress-bar">
-            <i class="bar"></i><i class="filled" style="width:0%"></i>
+            <i class="bar"></i><i class="filled" style="width:60%"></i><i class="check-one"></i><i class="check-two"></i>
           </div>
-          <span>Python<div class="subtext">3 years</div></span>
+          <span>TailWindCSS<div class="subtext">1 years</div></span>
           <div class="progress-bar">
-            <i class="bar"></i><i class="filled" style="width:0%"></i>
+            <i class="bar"></i><i class="filled" style="width:60%"></i><i class="check-one"></i><i class="check-two"></i>
           </div>
-          <span>SvelteKit<div class="subtext">0 years</div></span>
+          <span>Lua<div class="subtext">5 years</div></span>
           <div class="progress-bar">
-            <i class="bar"></i><i class="filled" style="width:0%"></i>
+            <i class="bar"></i><i class="filled" style="width:55%"></i><i class="check-one"></i><i class="check-two"></i>
           </div>
-          <span>TailWindCSS<div class="subtext">0 years</div></span>
+          <span>Python<div class="subtext">4 years</div></span>
           <div class="progress-bar">
-            <i class="bar"></i><i class="filled" style="width:0%"></i>
+            <i class="bar"></i><i class="filled" style="width:0%"></i><i class="check-one"></i>
           </div>
           <span>...and<div class="subtext"></div></span>
-          <span>I want to learn C#, C++ & Deno JS</span>
+          <span>I want to learn Go Lang</span>
           <div></div>
       </section>
       </div>
@@ -158,58 +176,92 @@
         <div class="images">
           <img height="44" width="108" src="imgs/icons/Apache.png" alt="Apache">
           <img height="44" width="271" src="imgs/icons/Atlassian.png" alt="Atlassian">
-          <img height="44" width="88" src="imgs/icons/Auth0.png" alt="Auth Zero">
+          <img height="44" width="95" src="imgs/icons/Auth0.png" alt="Auth Zero">
           <img height="44" width="246" src="imgs/icons/Azure.png" alt="Microsoft Azure">
           <img height="44" width="44" src="imgs/icons/Deno.png" alt="Deno JS">
-          <img height="44" width="88" src="imgs/icons/DigitalOcean.png" alt="Digital Ocean">
+          <img height="44" width="121" src="imgs/icons/DigitalOcean.png" alt="Digital Ocean">
           <img height="44" width="187" src="imgs/icons/Eclipse.png" alt="Eclipse">
-          <img height="44" width="88" src="imgs/icons/Expressjs.png" alt="Express JS">
+          <img height="44" width="143" src="imgs/icons/ExpressJS.png" alt="Express JS">
           <img height="44" width="44" src="imgs/icons/Filezilla.png" alt="File zilla">
-          <img height="44" width="88" src="imgs/icons/FreeBSD.png" alt="Free BSD">
+          <img height="44" width="121" src="imgs/icons/FreeBSD.png" alt="Free BSD">
           <img height="44" width="104" src="imgs/icons/Git.png" alt="Git">
-          <img height="44" width="132" src="imgs/icons/Github.png" alt="Git Hub">
-          <img height="44" width="73" src="imgs/icons/GitKraken.png" alt="Git Kraken">
-          <img height="44" width="144" src="imgs/icons/Gitlab.png" alt="Git Lab">
-          <img height="44" width="186" src="imgs/icons/Grafana.png" alt="Grafana">
-          <img height="44" width="63" src="imgs/icons/hapiJS.png" alt="Hapi JS">
-          <img height="44" width="49" src="imgs/icons/HAProxy.png" alt="HA Proxy">
-          <img height="44" width="144" src="imgs/icons/Jenkins.png" alt="Jenkins">
-          <img height="44" width="88" src="imgs/icons/Laravel.png" alt="Laravel">
-          <img height="44" width="43" src="imgs/icons/Linux.png" alt="Linux">
-          <img height="44" width="44" src="imgs/icons/MongoDBAtlas.png" alt="Mongo DB Atlas">
+          <img height="44" width="122" src="imgs/icons/Github.png" alt="GitHub">
+          <img height="44" width="70" src="imgs/icons/GitKraken.png" alt="Git Kraken">
+          <img height="44" width="144" src="imgs/icons/Gitlab.png" alt="GitLab">
+          <img height="44" width="184" src="imgs/icons/Grafana.png" alt="Grafana">
+          <img height="44" width="49" src="imgs/icons/HAProxy.png" alt="HAProxy">
+          <img height="44" width="143" src="imgs/icons/Jenkins.png" alt="Jenkins">
+          <img height="44" width="143" src="imgs/icons/Laravel.png" alt="Laravel">
+          <img height="44" width="44" src="imgs/icons/Linux.png" alt="Linux">
+          <img height="44" width="50" src="imgs/icons/MongoDBAtlas.png" alt="Mongo DB Atlas">
           <img height="44" width="163" src="imgs/icons/MongoDB.png" alt="Mongo DB">
           <img height="44" width="85" src="imgs/icons/MySQL.png" alt="MySQL">
-          <img height="44" width="88" src="imgs/icons/Nginx.png" alt="Nginx">
-          <img height="44" width="88" src="imgs/icons/NodeJS.png" alt="Node JS">
-          <img height="44" width="44" src="imgs/icons/OVHcloud.png" alt="OVH cloud">
+          <img height="44" width="184" src="imgs/icons/Nginx.png" alt="Nginx">
+          <img height="44" width="121" src="imgs/icons/NodeJS.png" alt="Node JS">
+          <img height="44" width="70" src="imgs/icons/OVHCloud.png" alt="OVH cloud">
           <img height="44" width="150" src="imgs/icons/PFsense.png" alt="PF Sense">
           <img height="44" width="44" src="imgs/icons/Plesk.png" alt="Plesk">
-          <img height="44" width="132" src="imgs/icons/Pm2.png" alt="PM Two">
+          <img height="44" width="144" src="imgs/icons/Pm2.png" alt="PM Two">
           <img height="44" width="137" src="imgs/icons/Redis.png" alt="Redis">
-          <img height="44" width="43" src="imgs/icons/ShareX.png" alt="Share X">
+          <img height="44" width="44" src="imgs/icons/ShareX.png" alt="Share X">
           <img height="44" width="44" src="imgs/icons/Sublimetext.png" alt="Sublime Text">
-          <img height="44" width="43" src="imgs/icons/Thunderbird.png" alt="Thunder Bird">
-          <img height="44" width="88" src="imgs/icons/Ubuntu.png" alt="Ubuntu">
+          <img height="44" width="44" src="imgs/icons/Thunderbird.png" alt="Thunder Bird">
+          <img height="44" width="144" src="imgs/icons/Ubuntu.png" alt="Ubuntu">
           <img height="44" width="206" src="imgs/icons/Virtualmin.png" alt="Virtual min">
           <img height="44" width="262" src="imgs/icons/VSCode.png" alt="Visual Studio Code">
           <img height="44" width="88" src="imgs/icons/VueJS.png" alt="Vue JS">
           <img height="44" width="44" src="imgs/icons/winscp.png" alt="WinSCP">
-          <img height="44" width="43" src="imgs/icons/XAMPP.png" alt="XAMPP">
-          <img height="44" width="88" src="imgs/icons/YiiFramework.png" alt="Yii Framework">
-          <img height="44" width="166" src="imgs/icons/ZendTechnologies.png" alt="Zend Framework">
-          <img height="44" width="88" src="imgs/icons/Trello.png" alt="Trello">
-          <img height="44" width="88" src="imgs/icons/NewRelic.png" alt="New Relic">
+          <img height="44" width="44" src="imgs/icons/XAMPP.png" alt="XAMPP">
+          <img height="44" width="144" src="imgs/icons/YiiFramework.png" alt="Yii Framework">
+          <img height="44" width="186" src="imgs/icons/ZendTechnologies.png" alt="Zend Framework">
+          <img height="44" width="184" src="imgs/icons/Trello.png" alt="Trello">
+          <img height="44" width="80" src="imgs/icons/NewRelic.png" alt="New Relic">
           <img height="44" width="145" src="imgs/icons/Twilio.png" alt="Twilio">
-          <img height="44" width="148" src="imgs/icons/Termius.png" alt="Termius">
+          <img height="44" width="141" src="imgs/icons/Termius.png" alt="Termius">
           <img height="44" width="141" src="imgs/icons/Travis.png" alt="Travis CI">
           <img height="44" width="121" src="imgs/icons/Unity.png" alt="Unity">
-          <img height="44" width="176" src="imgs/icons/Electron.png" alt="Electron JS">
-          <img height="44" width="29" src="imgs/icons/Figma.png" alt="Figma">
-          <img height="44" width="246" src="imgs/icons/RabbitMQ.png" alt="RabbitMQ">
-          <img height="44" width="249" src="imgs/icons/CloudAMQP.png" alt="CloudAMQP">
+          <img height="44" width="206" src="imgs/icons/Electron.png" alt="Electron JS">
+          <img height="44" width="30" src="imgs/icons/Figma.png" alt="Figma">
+          <img height="44" width="246" src="imgs/icons/RabbitMQ.png" alt="Rabbit MQ">
+          <img height="44" width="249" src="imgs/icons/CloudAMQP.png" alt="Cloud AMQP">
           <img height="44" width="104" src="imgs/icons/Ably.png" alt="Ably">
-          <img height="44" width="104" src="imgs/icons/Blesta.png" alt="Blesta">
-          <img height="44" width="104" src="imgs/icons/Shopify.png" alt="Shopify">
+          <img height="44" width="141" src="imgs/icons/Blesta.png" alt="Blesta">
+          <img height="44" width="141" src="imgs/icons/Shopify.png" alt="Shopify">
+          <img height="44" width="166" src="imgs/icons/WHMCS.png" alt="WHMCS">
+          <img height="44" width="141" src="imgs/icons/CPanel.png" alt="CPanel">
+          <img height="44" width="206" src="imgs/icons/TeamViewer.png" alt="Team Viewer">
+          <img height="44" width="184" src="imgs/icons/RescueTime.png" alt="Rescue Time">
+          <img height="44" width="163" src="imgs/icons/Pterodactyl.png" alt="Pterodactyl">
+          <img height="44" width="163" src="imgs/icons/Docker.png" alt="Docker">
+          <img height="44" width="184" src="imgs/icons/SuperTokens.png" alt="Super Tokens">
+          <img height="44" width="163" src="imgs/icons/Render.png" alt="Render">
+          <img height="44" width="134" src="imgs/icons/NS1.png" alt="NS One">
+          <img height="44" width="163" src="imgs/icons/CapRover.png" alt="Cap Rover">
+          <img height="44" width="163" src="imgs/icons/Scrypted.png" alt="Scrypted">
+          <img height="44" width="163" src="imgs/icons/WordPress.png" alt="Word Press">
+          <img height="44" width="141" src="imgs/icons/Iubenda.png" alt="Iubenda">
+          <img height="44" width="163" src="imgs/icons/Hootsuite.png" alt="Hoot suite">
+          <img height="44" width="163" src="imgs/icons/Zigbee.png" alt="Zigbee">
+          <img height="44" width="163" src="imgs/icons/WooCommerce.png" alt="Woo Commerce">
+          <img height="44" width="246" src="imgs/icons/HomeAssistant.png" alt="Home Assistant">
+          <img height="44" width="163" src="imgs/icons/BunnyCDN.png" alt="Bunny CDN">
+          <img height="44" width="163" src="imgs/icons/Frigate.png" alt="Frigate">
+          <img height="44" width="184" src="imgs/icons/UKPostbox.png" alt="UK Postbox">
+          <img height="44" width="184" src="imgs/icons/ShopifyPartners.png" alt="Shopify Partners">
+          <img height="44" width="141" src="imgs/icons/GoogleCoral.png" alt="Google Coral">
+          <img height="44" width="184" src="imgs/icons/ZohoSocial.png" alt="Zoho Social">
+          <img height="44" width="141" src="imgs/icons/Cloudflare.png" alt="Cloudflare">
+          <img height="44" width="184" src="imgs/icons/Kubernetes.png" alt="Kubernetes">
+          <img height="44" width="246" src="imgs/icons/TailwindCSS.png" alt="Tailwind CSS">
+          <img height="44" width="246" src="imgs/icons/SvelteKit.png" alt="Svelte Kit">
+          <img height="44" width="246" src="imgs/icons/Proxmox.png" alt="Proxmox">
+          <img height="44" width="141" src="imgs/icons/Snyk.png" alt="Snyk">
+          <img height="44" width="184" src="imgs/icons/Sentry.png" alt="Sentry">
+          <!-- 271 -->
+          <!-- 246 -->
+          <!-- 184 -->
+          <!-- 141 -->
+          <!-- 95 -->
         </div>
       </div>
       <div class="projects">
@@ -225,11 +277,64 @@
         </article>
       </div>
       <div class="projects">
+        <h1>2024</h1>
+        <article>
+          <h1>Learning Autodesk Revit</h1>
+          <p>This years gonna be big, like building a new house big. So I needed the best software and a challange to set myself, there's nothing better than to start learning Autodesk and Revit. I've tasked myself with designing a liveable comfy space from scratch</p>
+          <span class="left subtext">Autodesk, Autodesk Revit</span><span class="right subtext">2024 - Present</span>
+        </article>
+        <article>
+          <h1>"Home" data centre expansion</h1>
+          <p>Time to expand the mini data centre, the 37u server rack is being moved to a new location and along with it, a complete upgrade. More servers, better network, more UPS! Not really "home hosting" anymore, it's become a very professional and enterprice grade setup</p>
+          <span class="left subtext">Cisco switch, 10G LAN, Eaton UPS</span><span class="right subtext">2024 - Present</span>
+        </article>
+        <article>
+          <h1>Smart home</h1>
+          <p>I've always dreamt of this and since I started using Home Assistant last year, It's now possible! I have already started smartifying light switches in the house and using Siri to control them, cant wait to start with motion sensors, automations and the rest, this year!</p>
+          <span class="left subtext">Home Assistant, HomePod, Zigbee</span><span class="right subtext">2024 - Present</span>
+        </article>
+        <article>
+          <h1>Control panel galore</h1>
+          <p>Now that I have made my own Single Sign On, I want to create a ton of control panels that use it for user management, they will control various things like incident management, website management, monitoring, e-commerce management, discord bots and loads of other things!</p>
+          <span class="left subtext">SvelteKit, OAuth, TailWindCSS</span><span class="right subtext">2024 - Present</span>
+        </article>
+        <article>
+          <h1>Creating a knowledgebase</h1>
+          <p>I've always wanted to share my instructures and setup guides I have on my Github in a nice and presentable way. So I'm going to make a knowledgebase/wiki site from scratch with SvelteKit and NodeJS and use Github markdown to be my content management and versioning!</p>
+          <span class="left subtext">SvelteKit, TailWindCSS, NodeJS, Github</span><span class="right subtext">2024 - Present</span>
+        </article>
+      </div>
+      <div class="projects">
         <h1>2023</h1>
         <article>
           <h1>Single Sign On with SvelteKit & SuperTokens</h1>
-          <p>This has always been a major goal of mine, having a central user system for all my projects, luckily I found SuperTokens which has made this process easy</p>
+          <p>This has always been a big goal of mine, having a central user management system for all my projects, luckily I found SuperTokens which has made this process easy</p>
           <span class="left subtext">SvelteKit, SuperTokens, OAuth, TypeScript, TailWindCSS</span><span class="right subtext">2023 - Present</span>
+        </article>
+        <article>
+          <h1>Business grade fibre broadband & network upgrade</h1>
+          <p>Another big goal of mine was to get business grade internet, with all the fanciness, tons of static IPs and SLA! After patiently waiting, it's here! Every proxmox VM gets its own public IP and to celebrate I upgraded the LAN network too!</p>
+          <span class="left subtext">Leased business line, static ips galore</span><span class="right subtext">2023</span>
+        </article>
+        <article>
+          <h1>Home Assistant, Coral AI & Frigate</h1>
+          <p>After the CCTV NVR failed this year, I went all in and decided it was finally time to try Home Assistant and Frigate. I have been loving it ever since,  Frigate with Coral AI is a BIG improvement.</p>
+          <span class="left subtext">Home Assistant, Coral, Frigate, Proxmox VM</span><span class="right subtext">2023</span>
+        </article>
+        <article>
+          <h1>Proxmox</h1>
+          <p>Always wanted to manage my own VMs locally and learn how to use Proxmox. This year I purchased a Dell workstation to run a few VMs which consolidated my machines and reduced server running costs. I hope to make this more professional and reliable in the future</p>
+          <span class="left subtext">Proxmox, Dell Xeon workstation</span><span class="right subtext">2023 - Present</span>
+        </article>
+        <article>
+          <h1>More privacy focused CDN</h1>
+          <p>I've never liked Cloudflare, due to privacy and being an internet monopoly but they're a leader so I've had to use them. This was the year I wanted to change that, so changed to using BunnyCDN</p>
+          <span class="left subtext">Cloudflare, BunnyCDN, DNS, CDN</span><span class="right subtext">2023</span>
+        </article>
+        <article>
+          <h1>Built myself a new workstation</h1>
+          <p>I finally got around to building myself a new PC, a powerful Intel i9 workstation with 128gb of RAM, it's a beast and has helped me tons already. Look forward to using it for many years</p>
+          <span class="left subtext">Intel i9-10900k, G.Skill 128gb, Nvidia 4080, Samsung 2tb M.2</span><span class="right subtext">2023</span>
         </article>
       </div>
       <div class="projects">
@@ -237,7 +342,12 @@
         <article>
           <h1>Creating my first SvelteKit website</h1>
           <p>I have become a big fan of SvelteKit and TailWindCSS because of its massive devops improvements. This project was creating a big internal e-commerce SvelteKit website for my business</p>
-          <span class="left subtext">SvelteKit, TypeScript, TailWindCSS</span><span class="right subtext">2022 - Present</span>
+          <span class="left subtext">SvelteKit, TypeScript, TailWindCSS</span><span class="right subtext">2022 - 2024</span>
+        </article>
+        <article>
+          <h1>Starting a small business & using Shopify</h1>
+          <p>Setting up and running a Shopify store for my small business. I made my own theme for my store, plugins and become a Shopify Partner in doing so</p>
+          <span class="left subtext">Shopify, Shopify Liquid, Hootsuite, UK Postbox</span><span class="right subtext">2022 - 2024</span>
         </article>
         <article>
           <h1>More open sourcing with Docker</h1>
@@ -258,7 +368,7 @@
         <article>
           <h1>Global Minecraft Network</h1>
           <p>I have begun working on a project where Minecraft servers from around the world are connected together, it's currently top secret but more info next few years</p>
-          <span class="left subtext">Java, NodeJS, MongoDB, RabbitMQ</span><span class="right subtext">2020 - Present</span>
+          <span class="left subtext">Java, NodeJS, MongoDB, RabbitMQ, CloudAMQP, Ably, NS1, Kubernetes</span><span class="right subtext">2020 - Present</span>
         </article>
       </div>
       <div class="projects">
@@ -368,7 +478,11 @@
 
       <b>At 18</b> I moved college to further my education, I became way more outdoorsy, walking and riding my new bike miles meaning I would like to now follow my childhood dream of working in public services. Something else noteworthy I became a licensed drone pilot in the United Kingdom and love to do aerial photography. I continue to progress my current projects and not start any new ones. I hope to build a new computer next year.
 
-      TL:DR; I first got my hands on a computer at 5, built my first computer at 9 and then taught myself to code at the age of 10 and now I'm at college studying for a degree in computing and one day hopefully I'll get my dream job, which is to work for Microsoft and if I'm not at the computer I'm outdoors most likely gardening or going for a walk and listening to music, recently I became a licensed drone pilot and do aerial photography and would like to work in public services now.</p>
+      <b>At 21</b> I found I wasn't that interested in public services so I stopped doing public services and moved on, continuing my other (more well-known) childhood dream of everything computers and technology! But I'm actually very practical and love to get my hands dirty, so I've been learning how to become an electrician and qualify as an electrician. Last year, I built a new computer for myself, one year overdue, but I cannot complain, it's a beast and to ensure I'm in good hands, I went with an all-out workstation rather than a gaming PC.
+      I cannot wait to see what this year has in store for me. I'm aiming for some big projects and want to build my own place where I can live forever.
+      Rest assured, my old PC is still alive and being put to good use as a server.
+
+      TL:DR; I first got my hands on a computer at 5, built my first computer at 9 and then taught myself to code at the age of 10 and went to college and got a degree in computing and networking and one day hopefully I'll get my dream job, which is to work for Microsoft and if I'm not at the computer I'm outdoors most likely gardening or going for a walk and listening to music, at 18 I became a licensed drone pilot and do aerial photography and recently turned 21, built a new computer and utilising my more practical side and aiming for an electricians degree and to build my forever home.</p>
     </section>
     <section id="contact">
       <h1 class="text-centre">Contact me</h1>
@@ -385,15 +499,11 @@
         <div>
           <h1>DM me on GitHub</h1>
           <a href="https://github.com/FlynCodes" target="_blank" rel="noopener">@FlynCodes</a>
-        </div>or
-        <div>
-          <h1>DM me on Instagram</h1>
-          <a href="https://instagram.com/FlynCodes" target="_blank" rel="noopener">@FlynCodes</a>
         </div>
       </div>
     </section>
     <footer>
-      <p class="text-centre"><b>Copyright © 2023 FlynCodes - All Rights Reserved</b></p>
+      <p class="text-centre"><b>Copyright © 2024 FlynCodes - All Rights Reserved</b></p>
       <p class="text-centre">Designed with Figma and made with HTML, CSS, JavaScript in Visual Studio Code over a weekend, hosted on <a href="https://github.com/FlynCodes/flyn.codes" target="_blank" rel="noopener">GitHub Pages with a GitHub project</a></p>
     </footer>
   </main>
